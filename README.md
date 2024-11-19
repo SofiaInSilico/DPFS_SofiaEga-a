@@ -15,4 +15,19 @@ Sitios de referencia:
 5. Sz Studios: https://www.szstudios.com.ar/es/ - Otra alternativa llamativa para el inicio de una página
 6. Brinca: https://campusbrinca.com - Interesantes colores y diseño gráfico
 
-   
+WIREFRAME:
+
+- Home
+![Captura de pantalla 2024-11-19 011540](https://github.com/user-attachments/assets/8b047f36-4ea0-4067-b595-1952aef8a6be)
+
+- Detalle de Producto
+![Captura de pantalla 2024-11-19 011551](https://github.com/user-attachments/assets/796eec90-bd3c-4054-b15b-345444b99b5a)
+
+- Carrito de Compras
+![Captura de pantalla 2024-11-19 011600](https://github.com/user-attachments/assets/31c2d785-79dd-466b-9534-341e76188405)
+
+- Formulario de Registro
+![Captura de pantalla 2024-11-19 011617](https://github.com/user-attachments/assets/10006c3f-6263-4991-94fe-4a0c42e8e795)
+
+- Formulario de Login
+![Captura de pantalla 2024-11-19 011609](https://github.com/user-attachments/assets/2462e81b-9104-4f17-a191-2e10ff8ea504)
