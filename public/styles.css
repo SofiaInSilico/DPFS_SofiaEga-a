@@ -46,6 +46,21 @@
     background-color: #777;
   }
 
+  .auth-buttons .register-button,
+.auth-buttons .login-button {
+  background-color: #777;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.auth-buttons .register-button:hover,
+.auth-buttons .login-button:hover {
+  background-color: #999;
+}
+
   .textButton {
     color: white;
     text-decoration: none;
