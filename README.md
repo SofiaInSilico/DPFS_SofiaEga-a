@@ -1,10 +1,10 @@
-# U-Note
+# Camanchaca
 
-Descripción: U-Note es una plataforma innovadora que ofrece agendas personalizadas para estudiantes universitarios, diseñadas específicamente para cada carrera, desde Artes Visuales y Letras hasta Abogacía y Veterinaria. Estas agendas están hechas a medida para cubrir la duración completa de la carrera, con secciones dedicadas al registro de avances, tareas y desempeño académico, ayudando a los estudiantes a mantenerse organizados y al tanto de su progreso.
+Descripción: Camanchaca Encuadernaciones es una plataforma innovadora que ofrece agendas personalizadas para estudiantes universitarios, diseñadas específicamente para cada carrera, desde Artes Visuales y Letras hasta Abogacía y Veterinaria. Estas agendas están hechas a medida para cubrir la duración completa de la carrera, con secciones dedicadas al registro de avances, tareas y desempeño académico, ayudando a los estudiantes a mantenerse organizados y al tanto de su progreso.
 
-Público objetivo: U-Note está dirigido a estudiantes universitarios comprometidos con su formación y que buscan herramientas prácticas para gestionar su tiempo y mejorar su rendimiento académico en sus estudios.
+Público objetivo: Camanchaca está dirigido a estudiantes universitarios comprometidos con su formación y que buscan herramientas prácticas para gestionar su tiempo y mejorar su rendimiento académico en sus estudios.
 
-Descripción personal:¡Hola! Soy Sofía, estudiante universitaria con una gran curiosidad por el mundo de las nuevas tecnologías. Me apasionan los animales, el cine y los cómics, y disfruto aprendiendo cosas nuevas cada día. Actualmente, estoy explorando el mundo tech para desarrollar habilidades que me permitan crear y colaborar en proyectos interesantes.
+Descripción personal:¡Hola! Soy Sofía, estudiante universitaria con gran curiosidad por el mundo de las nuevas tecnologías. Me apasionan los animales, el cine y los cómics, y disfruto aprendiendo cosas nuevas cada día. Actualmente, estoy explorando el mundo tech para desarrollar habilidades que me permitan crear y colaborar en proyectos interesantes.
 
 Sitios de referencia:
 
@@ -36,3 +36,9 @@ WIREFRAME:
 - Formulario de Login
 
 ![Captura de pantalla 2024-11-19 011609](https://github.com/user-attachments/assets/2462e81b-9104-4f17-a191-2e10ff8ea504)
+
+SPRINT 2
+
+Tablero de trabajo: https://trello.com/b/KnnRUatq/organizacion-de-trabajo
+
+
