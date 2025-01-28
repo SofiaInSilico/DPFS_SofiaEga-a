@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Producto</title>
+  <link rel="stylesheet" href="productDetail.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html"><img src="images/Camanchaca.jpg" alt="Logo" class="imagen_redonda"></a>
+    <div class="nav-buttons">
+      <button>Misión y Visión</button>
+      <button>Accesorios</button>
+      <button>Agendas</button>
+    </div>
+  </nav>
+
+  <!-- Main Product Section -->
+  <section class="product-detail">
+    <!-- Image Carousel -->
+    <div class="image-gallery">
+      <button class="arrow left" id="prev">&#9664;</button>
+      <div class="thumbnail-gallery">
+        <img src="producto1.jpg" alt="Producto 1" class="thumbnail">
+        <img src="producto2.jpg" alt="Producto 2" class="thumbnail">
+        <img src="producto3.jpg" alt="Producto 3" class="thumbnail">
+      </div>
+      <button class="arrow right" id="next">&#9654;</button>
+    </div>
+
+    <!-- Product Information -->
+    <div class="product-info">
+      <h1>Nombre del Producto</h1>
+      <p class="price">$XX.XX</p>
+      <div class="dropdown">
+        <label for="institution">Institución:</label>
+        <select id="institution">
+          <option value="institucion1">Institución 1</option>
+          <option value="institucion2">Institución 2</option>
+          <option value="institucion3">Institución 3</option>
+        </select>
+      </div>
+      <div class="quantity">
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" value="1" min="1">
+      </div>
+      <div class="postal-code">
+        <label for="postal">Código Postal:</label>
+        <input type="text" id="postal" placeholder="Ingresa tu código postal">
+      </div>
+      <button class="calculate-price">Calcular precio</button>
+    </div>
+  </section>
+
+  <!-- Product Description -->
+  <section class="product-description">
+    <h2>Descripción del Producto</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptates. Nemo laboriosam labore tenetur quibusdam aperiam illo et provident, deserunt, hic consectetur fugiat ipsa modi velit at magni neque dignissimos!
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="newsletter">
+        <h3>Suscríbete a nuestro Newsletter</h3>
+        <input type="email" placeholder="Tu correo electrónico">
+        <button>Suscribirse</button>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+      </div>
+      <div class="contact">
+        <p>Correo: camanchacaoficial@gmail.com</p>
+        <p>&copy; 2025 Camanchaca Encuadernaciones</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

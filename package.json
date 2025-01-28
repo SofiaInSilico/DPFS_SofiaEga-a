@@ -1,0 +1,17 @@
+{
+  "name": "dpfs_sofia_egana-main",
+  "version": "1.0.0",
+  "description": "Descripción: Camanchaca Encuadernaciones es una plataforma innovadora que ofrece agendas personalizadas para estudiantes universitarios, diseñadas específicamente para cada carrera, desde Artes Visuales y Letras hasta Abogacía y Veterinaria. Estas agendas están hechas a medida para cubrir la duración completa de la carrera, con secciones dedicadas al registro de avances, tareas y desempeño académico, ayudando a los estudiantes a mantenerse organizados y al tanto de su progreso.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

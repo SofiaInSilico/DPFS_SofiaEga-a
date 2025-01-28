@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="nav-buttons">
+      <button>Misión y Visión</button>
+      <button>Accesorios</button>
+      <button>Agendas</button>
+    </div>
+  </nav>
+
+  <!-- Shopping Cart Section -->
+  <section class="cart">
+    <h1>Carrito de Compras</h1>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Precio Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de producto añadido -->
+        <tr>
+          <td><img src="producto1.jpg" alt="Producto" class="cart-image"></td>
+          <td>Agenda Personalizada</td>
+          <td>1</td>
+          <td>$10.00</td>
+          <td>$10.00</td>
+          <td>
+            <button class="action-btn edit">✏️</button>
+            <button class="action-btn delete">🗑️</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="producto2.jpg" alt="Producto" class="cart-image"></td>
+          <td>Cuaderno de Notas</td>
+          <td>2</td>
+          <td>$7.50</td>
+          <td>$15.00</td>
+          <td>
+            <button class="action-btn edit">✏️</button>
+            <button class="action-btn delete">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cart-summary">
+      <p><strong>Total: $25.00</strong></p>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="newsletter">
+        <h3>Suscríbete a nuestro Newsletter</h3>
+        <input type="email" placeholder="Tu correo electrónico">
+        <button>Suscribirse</button>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+      </div>
+      <div class="contact">
+        <p>Correo: camanchacaoficial@gmail.com</p>
+        <p>&copy; 2025 Camanchaca Encuadernaciones</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
