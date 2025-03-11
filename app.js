@@ -1,20 +1,22 @@
-// Importa el módulo express
+// Importa express y path
 const express = require('express');
-const path = require('path'); // Necesario para servir archivos estáticos
+const path = require('path');
 
-// Crea una instancia de Express
 const app = express();
 
-// Configura una ruta para el archivo index.html
-app.use(express.static(path.join(__dirname, 'public'))); // archivos estáticosn en carpeta 'public'
+// Configurar motor de vistas EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-// Ruta por defecto
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html')); // Sirve el archivo index.html
-});
+// Servir archivos estáticos desde public/
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Configura el puerto en el que escuchará el servidor
+// Importar y usar las rutas
+const mainRoutes = require('./routes/mainRoutes');
+app.use(mainRoutes); // Usa las rutas definidas en mainRoutes.js
+
+// Configurar el puerto y arrancar el servidor
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+  console.log(`Servidor escuchando en http://localhost:3000`);
 });

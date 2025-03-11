@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/header') %>
+  <head>
+    <link rel="stylesheet" href="/public/css/productCart.css">
+  </head>
+<body>
+ <!-- Navbar -->
+  <%- include('../partials/header') %>
+
+  <!-- Shopping Cart Section -->
+  <section class="cart">
+    <h1>Carrito de Compras</h1>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Precio Total</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de producto añadido -->
+        <tr>
+          <td><img src="producto1.jpg" alt="Producto" class="cart-image"></td>
+          <td>Agenda Personalizada</td>
+          <td>1</td>
+          <td>$10.00</td>
+          <td>$10.00</td>
+          <td>
+            <button class="action-btn edit">✏️</button>
+            <button class="action-btn delete">🗑️</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="producto2.jpg" alt="Producto" class="cart-image"></td>
+          <td>Cuaderno de Notas</td>
+          <td>2</td>
+          <td>$7.50</td>
+          <td>$15.00</td>
+          <td>
+            <button class="action-btn edit">✏️</button>
+            <button class="action-btn delete">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cart-summary">
+      <p><strong>Total: $25.00</strong></p>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+
+</body>
+</html>
