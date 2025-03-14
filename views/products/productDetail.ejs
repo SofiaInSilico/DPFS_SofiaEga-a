@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('../partials/header') %>
+  <%- include('../partials/head') %>
 
   <head>
     <link rel="stylesheet" href="/public/css/productDetail.css">
@@ -16,9 +16,9 @@
     <div class="image-gallery">
       <button class="arrow left" id="prev">&#9664;</button>
       <div class="thumbnail-gallery">
-        <img src="producto1.jpg" alt="Producto 1" class="thumbnail">
-        <img src="producto2.jpg" alt="Producto 2" class="thumbnail">
-        <img src="producto3.jpg" alt="Producto 3" class="thumbnail">
+        <img src="/public/images/Camanchaca.jpg" alt="Producto 1" class="thumbnail">
+        <img src="/public/images/Camanchaca.jpg" alt="Producto 2" class="thumbnail">
+        <img src="/public/images/Camanchaca.jpg" alt="Producto 3" class="thumbnail">
       </div>
       <button class="arrow right" id="next">&#9654;</button>
     </div>
@@ -44,7 +44,7 @@
         <input type="text" id="postal" placeholder="Ingresa tu código postal">
       </div>
       <button class="calculate-price">Calcular precio</button>
-      <a href="productCart.html"><button class="calculate-price">Añadir al carrito</button></a>
+      <a href="productCart.ejs"><button class="calculate-price">Añadir al carrito</button></a>
     </div>
   </section>
 

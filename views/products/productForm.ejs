@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 <%- include('../partials/head') %>
 <body>
@@ -7,35 +7,34 @@
   <div class="container">
     <h2><%= product ? 'Editar Producto' : 'Cargar Nuevo Producto' %></h2>
 
-    <form action="<%= product ? '/admin/products/' + product.id + '?_method=PUT' : '/admin/products' %>" method="POST" enctype="multipart/form-data">
-      <!-- Nombre -->
+    <form action="#" method="POST" enctype="multipart/form-data">
+     
       <label for="name">Nombre del Producto:</label>
-      <input type="text" id="name" name="name" value="<%= product ? product.name : '' %>" required>
+      <input type="text" id="name" name="name" value="#" required>
 
-      <!-- Descripción -->
+      
       <label for="description">Descripción:</label>
       <textarea id="description" name="description" required><%= product ? product.description : '' %></textarea>
 
-      <!-- Imagen -->
+      
       <label for="image">Imagen:</label>
       <input type="file" id="image" name="image" accept="image/*">
-      <% if (product && product.image) { %>
-        <img src="/images/<%= product.image %>" alt="Imagen actual" width="100">
+      <% if (product && Camanchaca.jpg) { %>
+        <img src="/public/images/Camanchaca.jpg %>" alt="Imagen actual" width="100"> ---- todavía no tengo las imgs - AÑADIR!
       <% } %>
 
-      <!-- Categoría -->
+      
       <label for="category">Categoría:</label>
       <select id="category" name="category" required>
-        <option value="electronica" <%= product && product.category === 'electronica' ? 'selected' : '' %>>Electrónica</option>
-        <option value="ropa" <%= product && product.category === 'ropa' ? 'selected' : '' %>>Ropa</option>
-        <option value="hogar" <%= product && product.category === 'hogar' ? 'selected' : '' %>>Hogar</option>
+        <option value="agenda" <%= product && product.category === 'agenda' ? 'selected' : '' %>>Agenda</option>
+        <option value="accesorios" <%= product && product.category === 'accesorios' ? 'selected' : '' %>>Accesorios</option>
       </select>
 
-      <!-- Colores / Talles -->
+      
       <label for="colors">Colores (separados por comas):</label>
       <input type="text" id="colors" name="colors" value="<%= product ? product.colors.join(', ') : '' %>">
 
-      <!-- Precio -->
+      
       <label for="price">Precio:</label>
       <input type="number" id="price" name="price" value="<%= product ? product.price : '' %>" required>
 
@@ -45,4 +44,5 @@
 
   <%- include('../partials/footer') %>
 </body>
-</html>
+</html> 
+-->
