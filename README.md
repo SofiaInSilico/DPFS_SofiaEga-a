@@ -1,3 +1,9 @@
+Admin info:
+Email: andrea@example.com         Password: admin
+
+User 1:
+Email: carlos@example.com        Password: user
+
 # Camanchaca
 
 Descripción: Camanchaca Encuadernaciones es una plataforma innovadora que ofrece agendas personalizadas para estudiantes universitarios, diseñadas específicamente para cada carrera, desde Artes Visuales y Letras hasta Abogacía y Veterinaria. Estas agendas están hechas a medida para cubrir la duración completa de la carrera, con secciones dedicadas al registro de avances, tareas y desempeño académico, ayudando a los estudiantes a mantenerse organizados y al tanto de su progreso.
@@ -41,4 +47,48 @@ SPRINT 2
 
 Tablero de trabajo: https://trello.com/b/KnnRUatq/organizacion-de-trabajo
 
+INSTRUCCIONES DE USO:
 
+Instalaciones backend
+
+A) Pasos de instalación framework, librerías y middleware:
+1) Abrir terminal: Ctrl + Shift + ñ
+2) cd backend
+3) Realizar las siguientes instalaciones:
+ npm install express (framework para crear servidor backend)
+ npm install nodemon -D (para reiniciar el servidor de manera automática al
+guardar – para desarrollo) -- opcional
+ npm install cors (para poder conectar frontend con backend)
+ npm install express-session (para gestionar sesiones, ideal para Login basado
+en sesión) * Sólo si manejas sesión. Si se usa JWT podría no necesitarse
+ npm install mysql2 (permite conectar con la base de datos)
+ npm install sequelize (ORM que facilita trabajar con la base de datos)
+ npm install squelize-cli –save-dev (Herramienta de línea de comandos de
+squelize para crear modelos, migraciones, etc.) * Sólo si se usa migraciones
+y seed: npx sequelize-cli init
+ npm install multer (middleware para subir archivos con imágenes) * Útil si
+se suben imágenes o documentos
+
+B) Luego de las instalaciones, en el backend ingresar al archivo config.json que
+contiene datos para la conexión a la db y modificar username y password con sus
+datos de conexión:
+    &quot;username&quot;: &quot;root&quot;,
+    &quot;password&quot;: &quot;1234&quot;,
+    &quot;database&quot;: &quot;camanchaca_store&quot;,
+    &quot;host&quot;: &quot;127.0.0.1&quot;,
+    &quot;dialect&quot;: &quot;mysql&quot;
+C) Conectar a la db:
+1) En VsCode, instalar la extensión SQLTools
+2) Para este proyecto instalar el driver SQLTools MySQL/MariaDB (porque usa
+MySQL)
+D) Migrar la base de datos con: npx sequelize-cli db:migrate
+
+E) Poblar la base de datos con datos falsos con: npx sequelize-cli db:seed:all
+
+Instalaciones frontend con REACT
+Pasos de instalación librerías y middleware:
+1) Abrir terminal: Ctrl + Shift + ñ
+2) cd frontend (si estás dentro de backend antes: cd .. )
+3) Realizar las siguientes instalaciones:
+ npm install react
+ npm install react-router-dom (para navegación entre páginas)
