@@ -26,17 +26,18 @@ export default function Dashboard() {
             <section className='dashboard'>
                 <h1>Bienvenidx, {user.name}</h1>
 
-
                 {user.role === 'admin' ? (
-                    <div>
+                    <div className="admin-panel">
                         <h2>Panel de Administrador</h2>
-                         <Link to='/products'>Ver productos</Link>
-                         <Link to='/users'>Ver usuarios</Link>
+                        <nav className="admin-links">
+                            <Link to='/products' className="btn-link">Ver productos</Link>
+                            <Link to='/users' className="btn-link">Ver usuarios</Link>
+                        </nav>
                     </div>
                 ) : (
-                    <div>
+                    <div className="client-panel">
                         <h2>Panel de Cliente</h2>
-                        <ul>
+                        <ul className="client-list">
                             <li>Ver mis compras</li>
                             <li>Crear productos</li>
                             <li>Actualizar mis datos</li>
@@ -47,4 +48,4 @@ export default function Dashboard() {
             <Footer />
         </>
     );
-};
+}

@@ -1,12 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { useState } from 'react';
 
-
 export default function Login({ passConfirm }) {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [remember, setRemember] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -32,11 +32,12 @@ export default function Login({ passConfirm }) {
             alert(data.message);
             navigate('/dashboard');
 
-            } catch (error) {
+        } catch (error) {
             console.error('Error en login', error);
             alert('Error de red o servidor');
         }
     };
+
     return (
         <>
             <Header />
@@ -44,32 +45,48 @@ export default function Login({ passConfirm }) {
                 <div className="form-container">
                     <h1>INICIO DE SESIÓN</h1>
                     <h2>Por favor ingresa tus datos</h2>
-                    <form onSubmit={handleLogin} >
+                    <form onSubmit={handleLogin} autoComplete="off">
                         <div className="form-group">
                             <label htmlFor="email">E-mail</label>
-                            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Contraseña</label>
-                            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required></input>
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className="extras">
-                            <div>
-                                <input type="checkbox" id="passConfirm" value={passConfirm}></input>
+                            <div className="remember-me">
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                    checked={remember}
+                                    onChange={() => setRemember(!remember)}
+                                />
                                 <label htmlFor="remember">Recordar usuario</label>
                             </div>
-                            <a href="#">Olvidé la contraseña</a>
+                            <a href="#" className="forgot-password">Olvidé la contraseña</a>
                         </div>
                         <button type="submit" className="submit-button">INGRESAR</button>
                         <button type="button" className="google-button">INGRESAR CON GOOGLE</button>
-                        <p className="#">¿No tienes una cuenta? <Link to="/register">¡Regístrate!</Link></p>
+                        <p className="register-link">
+                            ¿No tienes una cuenta? <Link to="/register">¡Regístrate!</Link>
+                        </p>
                     </form>
-                </div>
-                <div className="right-image">
-                    <img src="/public/images/Camanchaca.jpg" alt="Imagen de inicio de sesión"></img>
                 </div>
             </section>
             <Footer />
         </>
     );
-};
+}

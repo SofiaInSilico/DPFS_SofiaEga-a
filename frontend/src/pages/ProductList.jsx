@@ -23,7 +23,6 @@ export default function ProductList() {
             }
         }
         fetchData();
-
     }, []);
 
     const handleDelete = async (id) => {
@@ -46,16 +45,16 @@ export default function ProductList() {
     return (
         <>
             <Header />
+            <main className="product-list-container">
+                <h1>Sección Productos</h1>
+                <h4>La cantidad de productos cargados es de:</h4>
+                <p className="count">{count}</p>
 
-            <h1>Sección Productos</h1>
-            <h4>La cantidad de productos cargados es de:</h4>
-            <p>{count}</p>
+                <button onClick={() => navigate('/crear-producto')}>Crear Producto</button>
 
-            <button onClick={() => navigate('/crear-producto')}>Crear Producto</button>
-
-            <ProductTable products={products} onDelete={handleDelete} />
-
+                <ProductTable products={products} onDelete={handleDelete} />
+            </main>
             <Footer />
         </>
-    )
+    );
 }

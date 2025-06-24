@@ -19,8 +19,8 @@ export default function Register() {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }))
-    }
+        }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -39,7 +39,6 @@ export default function Register() {
             if (res.ok) {
                 alert('Ahora puede ingresar a su usuario');
                 navigate('/login');
-                
                 setFormData({
                     first_name: '',
                     last_name: '',
@@ -49,57 +48,97 @@ export default function Register() {
                     confirmPassword: '',
                     role: 'user'
                 });
-            };
+            }
         } catch (error) {
             console.error('Error', error);
         }
-    }
+    };
 
     return (
         <>
             <Header />
             <section className="create-user">
-
                 <div className="form-container">
                     <h1>Registrarse</h1>
                     <h2>Por favor ingresa tus datos</h2>
-                    <form onSubmit={handleSubmit} enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit} encType="multipart/form-data" autoComplete="off">
                         <div className="form-grid">
                             <div className="form-group">
                                 <label htmlFor="nombre">Nombre(s)</label>
-                                <input type="text" id="nombre" name='first_name' value={formData.first_name} onChange={handleChange} required></input>
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="first_name"
+                                    value={formData.first_name}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="apellidos">Apellido(s)</label>
-                                <input type="text" id="apellidos" name="last_name" value={formData.last_name} onChange={handleChange} required></input>
+                                <input
+                                    type="text"
+                                    id="apellidos"
+                                    name="last_name"
+                                    value={formData.last_name}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email">E-mail</label>
-                                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required></input>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="direccion">Dirección</label>
-                                <input type="text" id="direccion" name="address" value={formData.address} onChange={handleChange} required></input>
+                                <input
+                                    type="text"
+                                    id="direccion"
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Contraseña</label>
-                                <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required></input>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="confirm-password">Repetir Contraseña</label>
-                                <input type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required></input>
+                                <label htmlFor="confirmPassword">Repetir Contraseña</label>
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                         </div>
                         <div className="terms">
-                            <input type="checkbox" id="terms" name="terms" required></input>
+                            <input type="checkbox" id="terms" name="terms" required />
                             <label htmlFor="terms">Acepto los términos y condiciones de Camanchaca</label>
                         </div>
                         <button type="submit" className="submit-button">Registrarse</button>
                     </form>
                 </div>
             </section>
-
             <Footer />
         </>
     );
-};
+}

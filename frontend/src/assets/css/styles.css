@@ -74,9 +74,8 @@
     background-color: #555;
   }
   
-  /* Hero Section */
-  .hero {
-    background-image: url('hero-image.jpg');
+  /* landing page Section */
+  .landing-page {
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -87,21 +86,21 @@
     text-align: center;
   }
   
-  .hero .hero-content {
+  .landing-page .hero-content {
     max-width: 600px;
   }
   
-  .hero h1 {
+  .landing-page h1 {
     font-size: 3rem;
     margin-bottom: 20px;
   }
   
-  .hero p {
+  .landing-page p {
     font-size: 1.2rem;
     margin-bottom: 30px;
   }
   
-  .hero button {
+  .landing-page button {
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -109,7 +108,7 @@
     cursor: pointer;
   }
   
-  .hero button:hover {
+  .landing-page button:hover {
     background-color: #555;
   }
   
@@ -237,3 +236,738 @@
   footer .contact p {
     margin-top: 10px;
   }
+
+  /* Estilos base para navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.imagen_redonda {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Oculta el menú hamburguesa por defecto */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Contenedor general del nav (links + botones) */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Links del nav */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+/* Botones de login y register */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.register-button,
+.login-button {
+  background-color: #777;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover,
+.login-button:hover {
+  background-color: #999;
+}
+
+
+/* Responsive (mobile < 768px) */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .nav-content.open {
+    display: flex;
+  }
+
+  .nav-buttons,
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Sección principal de registro */
+.create-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+/* Card contenedor del formulario */
+.form-container {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.form-container h2 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+}
+
+/* Grid del formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Inputs individuales */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Términos y condiciones */
+.terms {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.terms label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Botón de enviar */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #555;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sección principal login */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  gap: 40px;
+  flex-wrap: wrap; /* para que en pantallas pequeñas se acomode */
+}
+
+/* Card contenedor del formulario */
+.login-section .form-container {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Títulos centrados */
+.login-section h1,
+.login-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-section h1 {
+  font-size: 2rem;
+}
+
+.login-section h2 {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Form grupos */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Extras: checkbox y link */
+.extras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Botones */
+.submit-button,
+.google-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Botón principal */
+.submit-button {
+  background-color: #333;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #555;
+}
+
+/* Botón Google */
+.google-button {
+  background-color: #db4437; /* rojo Google */
+  color: white;
+}
+
+.google-button:hover {
+  background-color: #b3392c;
+}
+
+/* Texto de registro */
+.register-link {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.register-link a {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+  .login-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+}
+
+/* Contenedor general para la sección productos */
+.product-list-container {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Titulares */
+.product-list-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-list-container h4 {
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.product-list-container p.count {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Botón crear producto */
+.product-list-container button {
+  display: block;
+  margin: 0 auto 30px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-list-container button:hover {
+  background-color: #555;
+}
+
+/* Tabla productos (estilo base, asumo que ProductTable es una tabla HTML) */
+.product-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-list-container th,
+.product-list-container td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: white;
+  background-color: #979797;
+}
+
+.product-list-container thead {
+  background-color: #575757;
+  color: white;
+}
+
+.product-list-container tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive: tabla horizontal scroll */
+@media (max-width: 700px) {
+  .product-list-container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Contenedor principal del dashboard */
+.dashboard {
+  max-width: 900px;
+  margin: 100px auto 150px; /* margen arriba y abajo */
+  padding: 60px 50px 70px; /* espacio interno amplio */
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Título principal */
+.dashboard h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Subtítulos */
+.dashboard h2 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Panel admin: contenedor de links */
+.admin-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Botones tipo link para admin */
+.btn-link {
+  background-color: #333;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-link:hover {
+  background-color: #555;
+}
+
+/* Lista de cliente */
+.client-list {
+  list-style-type: disc;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
+  padding-left: 20px;
+}
+
+.client-list li {
+  margin-bottom: 15px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .dashboard {
+    margin: 60px 15px 90px;
+    padding: 40px 25px 50px;
+  }
+
+  .admin-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.edit-product-container {
+  max-width: 800px;
+  margin: 100px auto 150px;
+  padding: 60px 50px 70px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.edit-product-container h1 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Si querés que los inputs también se vean bien (en caso de que no esté estilizado desde FormInput) */
+.edit-product-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.edit-product-container label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.edit-product-container input,
+.edit-product-container select,
+.edit-product-container textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.edit-product-container button {
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-product-container button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .edit-product-container {
+    margin: 60px 20px;
+    padding: 40px 25px 50px;
+  }
+}
+
+.create-product-container {
+  max-width: 800px;
+  margin: 100px auto 150px;
+  padding: 60px 50px 70px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.create-product-container h1 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.create-product-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.create-product-container label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.create-product-container input,
+.create-product-container select,
+.create-product-container textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.create-product-container button {
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-product-container button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .create-product-container {
+    margin: 60px 20px;
+    padding: 40px 25px 50px;
+  }
+}
+
+/*User Table*/
+
+/* Contenedor de tabla */
+.user-table-container {
+  max-width: 1200px;
+  margin: 80px auto 120px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.user-table-container h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+
+/* Tabla */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.user-table thead {
+  background-color: #333;
+  color: white;
+}
+
+.user-table thead th {
+  padding: 12px;
+}
+
+.user-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Botones */
+.actions button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-table-container {
+    padding: 20px;
+    margin: 60px 10px 100px;
+  }
+
+  .user-table th, .user-table td {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}

@@ -1,20 +1,22 @@
-export default function UserTable({users, onDelete}) {
-  console.log('quiero saber qué pasa con: ', users);
+export default function UserTable({ users, onDelete }) {
   return (
-    <table>
-      <thead>
-        <th>#</th>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Correo electrónico</th>
-        <th>Dirección</th>
-        <th>Rol</th>
-        <th>Acción</th>
-      </thead>
-      <tbody>
-        {
-          users.map((user, index) => (
+    <section className="user-table-container">
+      <h1>Lista de Usuarios</h1>
+      <table className="user-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo electrónico</th>
+            <th>Dirección</th>
+            <th>Rol</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user, index) => (
             <tr key={user.id}>
               <td>{index + 1}</td>
               <td>{user.id}</td>
@@ -23,14 +25,14 @@ export default function UserTable({users, onDelete}) {
               <td>{user.email}</td>
               <td>{user.address}</td>
               <td>{user.rol}</td>
-              <td>
-                <button>Editar rol usuario</button>
-                <button onClick={() => onDelete(user.id)}>Eliminar usuario</button>
+              <td className="actions">
+                <button className="edit-btn">Editar rol</button>
+                <button className="delete-btn" onClick={() => onDelete(user.id)}>Eliminar</button>
               </td>
             </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  )
-};
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
+}
